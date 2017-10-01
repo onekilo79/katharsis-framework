@@ -9,7 +9,7 @@
 
 	<groupId>io.katharsis</groupId>
 	<artifactId>katharsis-build</artifactId>
-	<version>3.0.2</version>
+	<version>3.0.2.1</version>
 	<packaging>pom</packaging>
 
 	<name>Katharsis build POM</name>
@@ -244,13 +244,13 @@
 				<module>katharsis-parent</module>
 				<module>katharsis-core</module>
 				<module>katharsis-test</module>
+				<module>katharsis-jpa</module>
 				<module>katharsis-rs</module>
 				<module>katharsis-servlet</module>
 				<module>katharsis-cdi</module>
 				<module>katharsis-spring</module>
 				<module>katharsis-client</module>
 				<module>katharsis-meta</module>
-				<module>katharsis-jpa</module>
 				<module>katharsis-validation</module>
 				<module>katharsis-brave</module>
 				<module>katharsis-security</module>

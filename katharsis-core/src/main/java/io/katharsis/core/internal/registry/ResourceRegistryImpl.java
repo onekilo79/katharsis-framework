@@ -20,7 +20,7 @@ import io.katharsis.resource.registry.ServiceUrlProvider;
 import io.katharsis.utils.Optional;
 
 public class ResourceRegistryImpl implements ResourceRegistry {
-	protected final Map<Class, RegistryEntry> resources;
+	protected final ConcurrentHashMap<Class, RegistryEntry> resources;
 	private final ServiceUrlProvider serviceUrlProvider;
 	private final Logger logger = LoggerFactory.getLogger(ResourceRegistryImpl.class);
 	private ModuleRegistry moduleRegistry;
@@ -28,7 +28,7 @@ public class ResourceRegistryImpl implements ResourceRegistry {
 	public ResourceRegistryImpl(ModuleRegistry moduleRegistry, ServiceUrlProvider serviceUrlProvider) {
 		this.moduleRegistry = moduleRegistry;
 		this.serviceUrlProvider = serviceUrlProvider;
-		this.resources = new HashMap<>();
+		this.resources = new ConcurrentHashMap<>();
 		this.moduleRegistry.setResourceRegistry(this);
 	}
 
